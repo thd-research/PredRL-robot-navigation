@@ -112,16 +112,46 @@ Some key settings are described below (full description is available via
 | ``Nactor``                    | integer | Horizon length (in steps) for predictive controllers   |
 | ``pred_step_size_multiplier`` | integer | Prediction step size multiplier                        |
 
-
-
-
-
-
-
-
-
-
-
-
-
 Further details regarding ```Rcognita``` you can find [here](https://github.com/thd-research/PredRL-robot-navigation/tree/main/rcognita).
+## Sources
+
+1. [Robotis TurtleBot3 Repository](https://github.com/ROBOTIS-GIT/turtlebot3)
+2. [Rcognita](https://github.com/AIDynamicAction/rcognita)
+
+## Related literature
+
+Please, give us a credit if you use our sources for your research project :)
+
+```
+@article{osinenko2023generalized,
+  title={A generalized stacked reinforcement learning method for sampled systems},
+  author={Osinenko, Pavel and Dobriborsci, Dmitrii and Yaremenko, Grigory and Malaniya, Georgiy},
+  journal={IEEE Transactions on Automatic Control},
+  year={2023},
+  publisher={IEEE}
+}
+
+@article{dobriborsci2022experimental,
+  title={An experimental study of two predictive reinforcement learning methods and comparison with model-predictive control},
+  author={Dobriborsci, Dmitrii and Osinenko, Pavel and Aumer, Wolfgang},
+  journal={IFAC-PapersOnLine},
+  volume={55},
+  number={10},
+  pages={1545--1550},
+  year={2022},
+  publisher={Elsevier}
+}
+
+@article{osinenko2021effects,
+  title={Effects of sampling and prediction horizon in reinforcement learning},
+  author={Osinenko, Pavel and Dobriborsci, Dmitrii},
+  journal={IEEE Access},
+  volume={9},
+  pages={127611--127618},
+  year={2021},
+  publisher={IEEE}
+}
+```
+
+
+
