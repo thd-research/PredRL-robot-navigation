@@ -3,7 +3,7 @@
 Predictive reinforcement learning: mapless navigation method for mobile robot.
 This repository contains sources for results reproducing of paper submitted to Journal of Intelligent Manufacturing.
 
-## Instructions
+## Setting up
 
 ### Environment
 
@@ -64,3 +64,77 @@ If you need additional terminal inside of the Docker open new window in the term
     sudo ./into_docker.sh
     
 
+### Setting up the environment
+
+Open docker-container
+
+```
+cd docker
+bash run_docker.sh 
+```
+
+Inside of the docker navigate to the workspace and build the workspace
+
+```
+cd misis/PredRL-robot-navigation/turtlebot_ws
+catkin_build
+source devel/setup.bash
+```
+
+## Rcognita
+
+This repository is a snapshot of [Rcognita](https://github.com/AIDynamicAction/rcognita.git).
+```rcognita``` is a flexibly configurable framework for agent-enviroment simulation with a menu of predictive and safe reinforcement learning controllers. A detailed documentation is available under the link above.
+
+To execute benchamarking, run the gazebo simulation world (here, and further all commands must be executed in Docker!)
+
+```
+roslaunch turtlebot3_gazebo turtlebot3_empty_world.launch
+```
+
+Now, you can launch the ```rcognita```. Make sure that your path is ```/misis/PredRL-robot-navigation```. 
+Next,
+
+```cd rcognita/presets
+python3 main_3wrobot_ros_obst.py --Nactor 6 --pred_step_size_multiplier 8 --dt 0.1 --ctrl_mode MPC
+```
+
+### Settings
+
+Some key settings are described below (full description is available via
+``-h`` option).
+
++-------------------------+-----------+--------------------------------------------------------+
+| Parameter               | Type      | Description                                            |
++=========================+===========+========================================================+
+| ``ctrl_mode``           | string    | Controller mode  (MPC, SQL, RQL                        |
++-------------------------+-----------+--------------------------------------------------------+
+| ``dt``                  | number    | Controller sampling time                               |
++-------------------------+-----------+--------------------------------------------------------+
+| ``t1``                  | number    | Final time                                             |
++-------------------------+-----------+--------------------------------------------------------+
+| ``state_init``          | list      | Initial state                                          |
++-------------------------+-----------+--------------------------------------------------------+
+| ``is_log_data``         | binary    | Flag to log data                                       |
++-------------------------+-----------+--------------------------------------------------------+
+| ``is_visualization``    | binary    | Flag to produce graphical output                       |
++-------------------------+-----------+--------------------------------------------------------+
+| ``is_print_sim_step``   | binary    | Flag to print simulation step data                     |
++-------------------------+-----------+--------------------------------------------------------+
+| ``is_est_model``        | binary    | If a model of the system is to be estimated online     |
++-------------------------+-----------+--------------------------------------------------------+
+| ``Nactor``              | integer   | Horizon length (in steps) for predictive controllers   |
++-------------------------+-----------+--------------------------------------------------------+
+| ``stage_obj_struct``    | string    | Structure of running objective function                |
++-------------------------+-----------+--------------------------------------------------------+
+| ``Ncritic``             | integer   | Critic stack size (number of TDs)                      |
++-------------------------+-----------+--------------------------------------------------------+
+| ``gamma``               | number    | Discount factor                                        |
++-------------------------+-----------+--------------------------------------------------------+
+| ``critic_struct``       | string    | Structure of critic features                           |
++-------------------------+-----------+--------------------------------------------------------+
+| ``actor_struct``        | string    | Structure of actor features                            |
++-------------------------+-----------+--------------------------------------------------------+
+
+
+Further details regarding ```Rcognita``` you can find [here](https://github.com/thd-research/PredRL-robot-navigation/tree/main/rcognita).
