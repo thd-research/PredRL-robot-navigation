@@ -27,10 +27,6 @@ RUN apt-get update && apt-get install -y python3-pip
 RUN pip3 install pathlib statistics scipy
 RUN python3 -m pip install --upgrade pip
 
-# RUN pip3 install pybullet
-RUN pip3 install torch==1.9.1+cu111 torchvision==0.10.1+cu111 torchaudio==0.9.1 -f https://download.pytorch.org/whl/torch_stable.html
-# RUN pip3 install stable-baselines3
-
 ## GUI tunnel from docker
 RUN dpkg --add-architecture i386 && \
     apt-get update && apt-get install -y --no-install-recommends \
@@ -58,7 +54,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         libgles2 libgles2:i386 && \
     rm -rf /var/lib/apt/lists/*
 
-COPY docker2/10_nvidia.json /usr/share/glvnd/egl_vendor.d/10_nvidia.json
+COPY docker/10_nvidia.json /usr/share/glvnd/egl_vendor.d/10_nvidia.json
 # Required for non-glvnd setups.
 ENV LD_LIBRARY_PATH /usr/lib/x86_64-linux-gnu:/usr/lib/i386-linux-gnu${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}:/usr/local/nvidia/lib:/usr/local/nvidia/lib64
 
