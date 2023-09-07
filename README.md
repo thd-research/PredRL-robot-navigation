@@ -113,12 +113,17 @@ Some key settings are described below (full description is available via
 | ``pred_step_size_multiplier`` | integer | Prediction step size multiplier                        |
 
 Further details regarding ```Rcognita``` you can find [here](https://github.com/thd-research/PredRL-robot-navigation/tree/main/rcognita).
+
 ## Sources
 
-1. [Robotis TurtleBot3 Repository](https://github.com/ROBOTIS-GIT/turtlebot3)
-2. [Rcognita](https://github.com/AIDynamicAction/rcognita)
+1. This repository reflects the results of the work presented in the paper [Predictive reinforcement learning: map-less navigation method for mobile robot](https://link.springer.com/epdf/10.1007/s10845-023-02197-y?sharing_token=9J6qFaLJK8zlSeK8qLZNEfe4RwlQNchNByi7wbcMAY57w8Mfz1J8LlAq2EfEWCpoY-POnUOX83e-aS6Tl6RrOTGyBfSKSkaln5CkSZ38SxWPuKmr5fV63i9fXyhFPGlJiC9brh5lcPucxTDbQQiii7Dmg08v3kaRZ0H_ptlottk%3D)
+2. [Robotis TurtleBot3 Repository](https://github.com/ROBOTIS-GIT/turtlebot3)
+3. [Rcognita](https://github.com/AIDynamicAction/rcognita)
 
 ## Related literature
+
+
+
 
 Please, give us a credit if you use our sources for your research project :)
 
