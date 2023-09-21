@@ -21,7 +21,7 @@ You need to go into the downloaded folder and go into the docker folder.
 
 
 
-``` cd ros-2023-thd/docker```
+``` cd PredRL-robot-navigation/docker```
     
 
 If you don't have an Nvidia graphics card, run the command:
