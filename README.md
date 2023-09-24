@@ -13,17 +13,23 @@ Follow steps directories
 mkdir misis
 cd misis
 git clone https://github.com/thd-research/PredRL-robot-navigation.git
+```
+
+Then, cd into the repo and download git submodules
+
+```
+cd PredRL-robot-navigation
 git submodule init
 git submodule update
 ```
 
 ### Install Docker
 
-You need to go into the downloaded folder and go into the docker folder.
+You need to go into the docker folder.
 
 
 
-``` cd PredRL-robot-navigation/docker```
+```cd docker```
     
 
 If you don't have an Nvidia graphics card, run the command:
