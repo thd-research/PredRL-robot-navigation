@@ -104,7 +104,7 @@ roslaunch turtlebot3_gazebo turtlebot3_empty_world.launch
 Now, you can launch `rcognita`
 
 ```
-cd /misis/PredRL-robot-navigation/rcognita/presets
+cd /turtlebot_ws/PredRL-robot-navigation/rcognita/presets
 python3 main_3wrobot_ros_obst.py --Nactor 6 --pred_step_size_multiplier 8 --dt 0.1 --ctrl_mode MPC
 ```
 
