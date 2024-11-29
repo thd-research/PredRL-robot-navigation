@@ -10,8 +10,8 @@ This repository contains sources for results reproducing of paper submitted to J
 Follow steps directories
 
 ```
-mkdir misis
-cd misis
+mkdir turtlebot_ws
+cd turtlebot_ws
 git clone https://github.com/thd-research/PredRL-robot-navigation.git
 ```
 
@@ -84,7 +84,7 @@ bash run_docker.sh
 Inside of the docker navigate to the workspace and build the workspace
 
 ```
-cd misis/PredRL-robot-navigation/turtlebot_ws
+cd turtlebot_ws/PredRL-robot-navigation/turtlebot_ws
 catkin_make
 source devel/setup.bash
 ```
